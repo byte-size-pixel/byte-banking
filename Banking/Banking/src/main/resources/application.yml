@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: Banking
+  main:
+    allow-circular-reference: true
+  data:
+    mongodb:
+      uri: mongodb+srv://193j1a05h3:ammUGsfgO9t7ABTq@cluster0.wax9p.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+      database: banking
+      auto:
+        index-creation: true
