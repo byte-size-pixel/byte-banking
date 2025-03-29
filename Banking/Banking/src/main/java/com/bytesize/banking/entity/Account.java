@@ -25,7 +25,4 @@ public class Account {
     @DBRef
     private List<Transactions> transactions;
 
-    @Transient
-    private Collection<? extends GrantedAuthority> authorities;
-
 }
