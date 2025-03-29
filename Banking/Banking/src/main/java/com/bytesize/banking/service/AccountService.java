@@ -1,13 +1,18 @@
 package com.bytesize.banking.service;
 
-import com.bytesize.banking.repository.AccountRepo;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import com.bytesize.banking.entity.Account;
+import com.bytesize.banking.entity.Transactions;
 
-@Service
-public class AccountService {
+import java.math.BigDecimal;
+import java.util.List;
 
-    @Autowired
-    AccountRepo accountRepo;
+public interface AccountService {
+
+    BigDecimal getAccountBalance(long accountId);
+    Account getTransactionsByAccountId(long accountId);
+    Account findAccountByAccountId(long accountId);
+    void registerAccount(Account account);
+    void deposit(Account account, BigDecimal amount);
+    void withdraw(Account account, BigDecimal amount);
 
 }
